@@ -3,10 +3,11 @@
 
 #include <complex>
 #include <vector>
+#include "core/task/include/task.hpp"
+
+namespace SavchukTbb {
 
 using Complex = std::complex<double>;
-
-#include "core/task/include/task.hpp"
 
 class SavchukCRSMatMultTBBSequential : public ppc::core::Task {
  public:
@@ -52,3 +53,4 @@ class SavchukCRSMatMultTBBParallel : public ppc::core::Task {
   int numCols2{};
   Complex *result{};
 };
+}  // namespace SavchukTbb
